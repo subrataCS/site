@@ -1,0 +1,401 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f5f5;
+display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:320px;
+height:100vh;
+position:fixed;
+background:linear-gradient(
+180deg,
+#141420,
+#1d1d2f
+);
+color:white;
+overflow-y:auto;
+}
+
+.profile{
+padding:40px 20px;
+text-align:center;
+}
+
+.profile img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #2d2d45;
+}
+
+.profile h2{
+margin-top:15px;
+}
+
+.profile p{
+margin-top:8px;
+color:#aaa;
+}
+
+.socials{
+margin-top:20px;
+}
+
+.socials a{
+display:inline-block;
+margin:0 5px;
+padding:8px 10px;
+background:#23233a;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav a{
+display:block;
+padding:20px 35px;
+color:white;
+text-decoration:none;
+border-top:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+nav a:hover{
+background:#26263d;
+}
+
+/* CONTENT */
+
+.content{
+margin-left:320px;
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+background:white;
+padding:90px 100px;
+position:relative;
+border-bottom:1px solid #ddd;
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+opacity:.05;
+background:
+linear-gradient(45deg,#000 1px,transparent 1px);
+background-size:150px 150px;
+}
+
+.hero h1{
+position:relative;
+font-size:48px;
+}
+
+.underline{
+width:70px;
+height:4px;
+background:#222;
+margin-top:10px;
+position:relative;
+}
+
+.intro-card{
+position:relative;
+margin-top:50px;
+max-width:800px;
+}
+
+.intro-card h2{
+margin-bottom:15px;
+}
+
+.intro-card p{
+line-height:1.8;
+color:#555;
+}
+
+/* SECTIONS */
+
+.section{
+padding:60px 100px;
+}
+
+.section-title{
+font-size:34px;
+margin-bottom:30px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:35px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+/* ROADMAP */
+
+.roadmap-item{
+padding:12px 0;
+font-size:18px;
+}
+
+.done{
+color:#2a9d8f;
+}
+
+.active{
+color:#e76f51;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.stat h3{
+font-size:32px;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+}
+
+.skill{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+/* POSTS */
+
+.post{
+background:white;
+padding:35px;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.post h3{
+margin-bottom:15px;
+}
+
+.post p{
+color:#555;
+line-height:1.7;
+}
+
+.post button{
+margin-top:20px;
+padding:12px 24px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+background:#ececec;
+}
+
+
+
+/* recent writeups */
+.writeups-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.writeup-card{
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.writeup-card:hover{
+    transform:translateY(-4px);
+}
+
+.writeup-date{
+    color:#888;
+    font-size:14px;
+}
+
+.writeup-card h3{
+    margin-top:10px;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.writeup-card p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.read-btn{
+    display:inline-block;
+    padding:12px 24px;
+    border-radius:30px;
+    background:#ececec;
+    color:#222;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.read-btn:hover{
+    background:#dcdcdc;
+}
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.sidebar{
+position:relative;
+width:100%;
+height:auto;
+}
+
+.content{
+margin-left:0;
+}
+
+body{
+display:block;
+}
+
+.hero,
+.section{
+padding:40px;
+}
+
+.hero h1{
+font-size:36px;
+}
+}
+
+
+/* responsive  */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+/* Better typography */
+
+.hero h1{
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.section-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+/* Tablet */
+
+@media (max-width: 1024px){
+    .hero,
+    .section{
+        padding:60px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+    .sidebar{
+        width:100%;
+        position:relative;
+        height:auto;
+    }
+
+    .content{
+        margin-left:0;
+    }
+
+    .hero,
+    .section{
+        padding:30px 20px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Small phones */
+
+@media (max-width:480px){
+
+    .hero h1{
+        line-height:1.1;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .socials{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+}
